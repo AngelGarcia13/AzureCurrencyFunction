@@ -50,6 +50,7 @@ namespace Currency
 
     public class BankCurrencyRate {
         public IEnumerable<CurrencyRate> CurrencyRates { get; set; }
+        public string BankName { get; set; }
     }
 
     public class CurrencyRate
@@ -57,6 +58,5 @@ namespace Currency
         public string Currency { get; set; }
         public double Rate { get; set; }
         public string RateCurrency { get; set; }
-        public string BankName { get; set; }
     }
 }
