@@ -31,8 +31,8 @@ namespace Currency
             var document = await context.OpenAsync(address);
             
             var dollarSellSelector = "#edit-sell-wrapper .form-label-text";
-            var valueDollarBuy = document.QuerySelectorAll(dollarSellSelector);
-            var value = (valueDollarBuy.FirstOrDefault().TextContent).Split('=')[1];
+            var valueDollar = document.QuerySelectorAll(dollarSellSelector);
+            var value = (valueDollar.FirstOrDefault().TextContent).Split('=')[1];
             value = value.Substring(value.LastIndexOf("RD$") + 3).Trim();
 
             return new OkObjectResult(new BankCurrencyRate {
